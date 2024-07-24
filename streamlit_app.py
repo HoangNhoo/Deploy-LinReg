@@ -7,7 +7,7 @@ from sklearn.linear_model import LinearRegression
 st.set_page_config(layout="centered", page_title="Sales Prediction", initial_sidebar_state="auto")
 
 # Load the dataset
-df = pd.read_csv('Advertising.csv')
+df = pd.read_csv('advertising.csv')
 X = df[['TV', 'Radio']]
 y = df['Sales']
 
