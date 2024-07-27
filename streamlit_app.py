@@ -1,23 +1,12 @@
 import numpy as np
-import pandas as pd
 import streamlit as st
-from sklearn.linear_model import LinearRegression
+import pickle
 
-# Set Streamlit theme to white
 st.set_page_config(layout="centered", page_title="Sales Prediction", initial_sidebar_state="auto")
 
-# Load the dataset
-df = pd.read_csv('advertising.csv')
-X = df[['TV', 'Radio']]
-y = df['Sales']
-
-# Train the model
-model = LinearRegression()
-model.fit(X, y)
-
-# Streamlit app layout
 st.title('Sales Prediction')
 
+model = pickle.load(open('sales_model.pkl', 'rb'))
 # Input fields on one line
 col1, col2 = st.columns(2)
 with col1:
