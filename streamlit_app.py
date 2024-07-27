@@ -6,7 +6,7 @@ st.set_page_config(layout="centered", page_title="Sales Prediction", initial_sid
 
 st.title('Sales Prediction')
 
-model = pickle.load(open('sales_model.pkl', 'rb'))
+model = pickle.load(open('linear_regression_model.pkl', 'rb'))
 # Input fields on one line
 col1, col2 = st.columns(2)
 with col1:
